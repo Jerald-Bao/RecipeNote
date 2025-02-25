@@ -1,0 +1,117 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+}
+
+.recipe-container {
+    max-width: 800px;
+    margin: 50px auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.form-layout {
+    display: flex;
+    flex-direction: column;
+}
+
+.back-button {
+    position: 'absolute';
+    width: 50px;
+    height: 30px;
+    font-size: small;
+    vertical-align: middle;
+    top: 10;
+    right: 10;
+}
+
+.recipe-title,
+.ingredient-title,
+.description-title {
+    display: block;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.recipe-author {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.recipe-ingredients {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.ingredient {
+    flex: 0 0;
+    /* Two columns */
+    padding: 5px;
+    margin: 5px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.recipe-description {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.title-detail,
+.description-detail,
+.ingredients-detail {
+    width: 100%;
+    padding-right: 50px;
+}
+
+.title-detail textarea {
+    width: 100%;
+}
+
+.description-detail textarea {
+    width: 100%;
+}
+
+@media (min-width: 600px) {
+    .form-layout {
+        flex-direction: row;
+        /* Switch to horizontal layout */
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .left-column {
+        width: 100%;
+    }
+
+    .title-detail,
+    .description-detail {
+        width: 100%;
+        margin-right: 2%;
+    }
+
+    .recipe-ingredients {
+        max-width: 400px;
+    }
+
+    .ingredients-detail {
+        width: 100%;
+    }
+
+    .title-detail textarea {
+        width: 400px;
+    }
+
+    .description-detail textarea {
+        width: 400px;
+    }
+}
